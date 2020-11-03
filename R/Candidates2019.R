@@ -1,13 +1,13 @@
-#' 2019 Political candidates running for office
+#' 2019 political candidates running for office
 #'
 #' This package contains political candidates running
 #' for office across all levels of government in 2019
 #' @docType package
-#' @name Candidates2019
+#' @name PoliticalCandidates2019
 #' @aliases Candidates Candidates-package
 NULL
 
-#' "Candidates2019"
+#' "PoliticalCandidates2019"
 #'
 #' A data set containing political candidates
 #' running for different offices across all levels of
@@ -31,5 +31,5 @@ NULL
 #'    \item{gender}{gender of the candidate}
 #'    \item{election_result}{whether or not candidate won their election}
 #' }
-"Candidates2019"
+"PoliticalCandidates2019"
 

@@ -1,0 +1,17 @@
+Package: PoliticalCandidates2019
+Title: Information on 2019 political candidates
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Graham",
+           family = "Chickering",
+           role = c("aut", "cre"),
+           email = "gchickering21@amherst.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Information relating to candidates running for different offices in 2019.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)

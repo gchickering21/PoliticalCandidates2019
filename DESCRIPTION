@@ -17,3 +17,9 @@ Depends:
     R (>= 2.10)
 URL: https://github.com/gchickering21/PoliticalCandidates2019
 BugReports: https://github.com/gchickering21/PoliticalCandidates2019/issues
+Suggests: 
+    knitr,
+    rmarkdown,
+    tidyverse
+VignetteBuilder: knitr
+

@@ -4,7 +4,7 @@
 #' for office across all levels of government in 2019
 #' @docType package
 #' @name PoliticalCandidates2019
-#' @aliases Candidates Candidates-package
+#' @aliases PoliticalCandidates2019 PoliticalCandidates2019-package
 NULL
 
 #' "PoliticalCandidates2019"
@@ -13,8 +13,8 @@ NULL
 #' running for different offices across all levels of
 #' government and their outcomes in 2019
 #'
-#' @source \url{https://wholeads.us/}
-#' @format A dataframe with 33925 elements and 13 variables
+#' @source \url{https://wholeads.us}
+#' @format A dataframe with 33925 elements
 #' \describe{
 #'    \item{candidate_id}{unique identifier for each candidate}
 #'    \item{state}{state candidate ran in}

@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+![R-CMD-check](https://github.com/gchickering21/PoliticalCandidates2019/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
 The goal of PoliticalCandidates2019 is to …

@@ -1,8 +1,8 @@
 ---
-title: "PolticalCandidates2019"
+title: "PoliticalCandidates2019"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{PolticalCandidates2019}
+  %\VignetteIndexEntry{PoliticalCandidates2019}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

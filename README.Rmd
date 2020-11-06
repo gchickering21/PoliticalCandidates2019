@@ -52,7 +52,7 @@ This is an example showing how you can see the gender breakdown of who ran for p
 ```{r}
 gender_percents <- PoliticalCandidates2019 %>%
   select(gender) %>% 
-  filter(gender != "other" ) %>% 
+  filter(gender != "unknown" & gender != "other" ) %>% 
   group_by(gender) %>%
   summarize(count = n()) %>%
   mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2))

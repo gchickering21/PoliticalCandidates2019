@@ -54,7 +54,7 @@ ran for positions at all levels of government.
 ``` r
 gender_percents <- PoliticalCandidates2019 %>%
   select(gender) %>% 
-  filter(gender != "other" ) %>% 
+  filter(gender != "unknown" & gender != "other" ) %>% 
   group_by(gender) %>%
   summarize(count = n()) %>%
   mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2))
@@ -107,7 +107,7 @@ female
 
 <td style="text-align:right;">
 
-31.66
+32.67
 
 </td>
 
@@ -129,29 +129,7 @@ male
 
 <td style="text-align:right;">
 
-65.25
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-unknown
-
-</td>
-
-<td style="text-align:right;">
-
-1045
-
-</td>
-
-<td style="text-align:right;">
-
-3.08
+67.33
 
 </td>
 

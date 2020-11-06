@@ -17,7 +17,9 @@ themselves such as race and gender as well as the party they chose to
 affiliate themselves with. This data can be useful in being able to see
 and answer questions that breakdown these candidates by areas such as by
 levels of office, by state, by party, or by gender just to list a few
-examples. \#\# Installation
+examples.
+
+### Installation
 
 You can install the released version of PoliticalCandidates2019 from
 [CRAN](https://CRAN.R-project.org) with:
@@ -33,7 +35,7 @@ And the development version from [GitHub](https://github.com/) with:
 devtools::install_github("gchickering21/PoliticalCandidates2019")
 ```
 
-## Examples
+### Examples
 
 These are a few basic examples which shows you the type of questions
 that can be answered by looking at this dataset.

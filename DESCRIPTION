@@ -20,6 +20,7 @@ BugReports: https://github.com/gchickering21/PoliticalCandidates2019/issues
 Suggests: 
     knitr,
     rmarkdown,
-    tidyverse
+    tidyverse,
+    kableExtra
 VignetteBuilder: knitr
 

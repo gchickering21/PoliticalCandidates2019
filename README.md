@@ -53,10 +53,11 @@ ran for positions at all levels of government.
 
 ``` r
 gender_percents <- PoliticalCandidates2019 %>%
-  select(gender) %>%
+  select(gender) %>% 
+  filter(gender != "other" ) %>% 
   group_by(gender) %>%
   summarize(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100)
+  mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2))
 knitr::kable(gender_percents)
 ```
 
@@ -106,7 +107,7 @@ female
 
 <td style="text-align:right;">
 
-31.6639646
+31.66
 
 </td>
 
@@ -128,29 +129,7 @@ male
 
 <td style="text-align:right;">
 
-65.2527634
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-other
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-0.0029477
+65.25
 
 </td>
 
@@ -172,7 +151,7 @@ unknown
 
 <td style="text-align:right;">
 
-3.0803242
+3.08
 
 </td>
 
@@ -188,9 +167,10 @@ different types of candidates running for office.
 ``` r
 race_percents <- PoliticalCandidates2019 %>%
   select(race) %>%
+  filter(race != "unknown") %>%
   group_by(race) %>%
   summarize(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100) %>%
+  mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2)) %>%
   arrange(desc(percentage))
 knitr::kable(race_percents)
 ```
@@ -241,7 +221,7 @@ white
 
 <td style="text-align:right;">
 
-84.2358143
+88.44
 
 </td>
 
@@ -263,29 +243,7 @@ black or african american
 
 <td style="text-align:right;">
 
-5.9808401
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-unknown
-
-</td>
-
-<td style="text-align:right;">
-
-1614
-
-</td>
-
-<td style="text-align:right;">
-
-4.7575534
+6.28
 
 </td>
 
@@ -307,7 +265,7 @@ hispanic or latino
 
 <td style="text-align:right;">
 
-3.1717023
+3.33
 
 </td>
 
@@ -329,7 +287,7 @@ asian american or pacific islander
 
 <td style="text-align:right;">
 
-1.0641120
+1.12
 
 </td>
 
@@ -351,7 +309,7 @@ american indian or alaska native
 
 <td style="text-align:right;">
 
-0.3773029
+0.40
 
 </td>
 
@@ -373,7 +331,7 @@ multiracial
 
 <td style="text-align:right;">
 
-0.3124539
+0.33
 
 </td>
 
@@ -395,7 +353,7 @@ other
 
 <td style="text-align:right;">
 
-0.1002211
+0.11
 
 </td>
 
@@ -415,7 +373,7 @@ level_party_percents <- PoliticalCandidates2019 %>%
           | party_roll_up == "Independent") & winner_y_n == "Yes") %>%
   group_by(office_level, party_roll_up) %>%
   summarize(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100) %>%
+  mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2)) %>%
   select(office_level, party_roll_up, percentage)
 
 
@@ -470,19 +428,19 @@ regional
 
 <td style="text-align:right;">
 
-49.35065
+49.35
 
 </td>
 
 <td style="text-align:right;">
 
-2.5974026
+2.60
 
 </td>
 
 <td style="text-align:right;">
 
-48.051948
+48.05
 
 </td>
 
@@ -498,19 +456,19 @@ locality
 
 <td style="text-align:right;">
 
-25.42373
+25.42
 
 </td>
 
 <td style="text-align:right;">
 
-70.7627119
+70.76
 
 </td>
 
 <td style="text-align:right;">
 
-3.813559
+3.81
 
 </td>
 
@@ -526,19 +484,19 @@ country
 
 <td style="text-align:right;">
 
-54.89362
+54.89
 
 </td>
 
 <td style="text-align:right;">
 
-0.6382979
+0.64
 
 </td>
 
 <td style="text-align:right;">
 
-44.468085
+44.47
 
 </td>
 
@@ -554,19 +512,19 @@ administrativeArea2
 
 <td style="text-align:right;">
 
-27.06447
+27.06
 
 </td>
 
 <td style="text-align:right;">
 
-10.3155007
+10.32
 
 </td>
 
 <td style="text-align:right;">
 
-62.620027
+62.62
 
 </td>
 
@@ -582,19 +540,19 @@ administrativeArea1
 
 <td style="text-align:right;">
 
-47.49047
+47.49
 
 </td>
 
 <td style="text-align:right;">
 
-1.8583227
+1.86
 
 </td>
 
 <td style="text-align:right;">
 
-50.651207
+50.65
 
 </td>
 

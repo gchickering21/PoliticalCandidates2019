@@ -51,19 +51,21 @@ library(kableExtra)
 This is an example showing how you can see the gender breakdown of who ran for positions at all levels of government.
 ```{r}
 gender_percents <- PoliticalCandidates2019 %>%
-  select(gender) %>%
+  select(gender) %>% 
+  filter(gender != "other" ) %>% 
   group_by(gender) %>%
   summarize(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100)
+  mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2))
 knitr::kable(gender_percents)
 ```
  This is another example where we can see the racial demographics of the different types of candidates running for office.
 ```{r}
 race_percents <- PoliticalCandidates2019 %>%
   select(race) %>%
+  filter(race != "unknown") %>%
   group_by(race) %>%
   summarize(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100) %>%
+  mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2)) %>%
   arrange(desc(percentage))
 knitr::kable(race_percents)
 ```
@@ -77,7 +79,7 @@ level_party_percents <- PoliticalCandidates2019 %>%
           | party_roll_up == "Independent") & winner_y_n == "Yes") %>%
   group_by(office_level, party_roll_up) %>%
   summarize(count = n()) %>%
-  mutate(percentage = count / sum(count) * 100) %>%
+  mutate(percentage = count / sum(count) * 100, percentage=round(percentage,2)) %>%
   select(office_level, party_roll_up, percentage)
 
 

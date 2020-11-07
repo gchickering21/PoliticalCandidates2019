@@ -21,14 +21,8 @@ examples.
 
 ### Installation
 
-You can install the released version of PoliticalCandidates2019 from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("PoliticalCandidates2019")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version of PoliticalCandidates2019 from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
